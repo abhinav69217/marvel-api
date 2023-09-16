@@ -24,20 +24,22 @@ const page = ({ params }) => {
         ""
       ) : (
         <div
-          className="flex p-5 h-[100vh] items-center justify-center text-white"
+          className="flex flex-col items-center justify-center text-white"
           style={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(${bg.src})`,
-            backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
+            backgroundPosition: "center",
+            height: "100vh",
+            width: "100vw",
           }}
         >
-          <div className="w-1/3 flex justify-center">
+          <div className="w-full flex justify-center">
             <img
               className="rounded-lg h-[300px]"
               src={`${item.thumbnail.path}.${item.thumbnail.extension}`}
             />
           </div>
-          <div className="max-w-2xl text-center">
+          <div className="text-center w-4/6 mt-3	">
             <h1 className="text-3xl font-bold underline">{item.name}</h1>
             <h5 className="mt-3">{item.description}</h5>
           </div>
